@@ -1,0 +1,240 @@
+/* Root */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ---------------- THEMES ---------------- */
+
+body.light {
+  background-color: #f5f5f5;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* ---------------- APP PANEL ---------------- */
+
+.app {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+}
+
+body.dark .app {
+  background: rgba(0,0,0,0.6);
+  color: white;
+}
+
+/* ---------------- INPUT ---------------- */
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+body.dark input {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+button {
+  padding: 10px 14px;
+  margin: 8px 5px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background: #3498db;
+  color: white;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+body.dark button {
+  background: #555;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------------- SPINNER ---------------- */
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------------- WEATHER CARD ---------------- */
+
+.weather-card {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 16px;
+  animation: fadeIn 0.4s ease;
+}
+
+body.light .weather-card {
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+body.dark .weather-card {
+  background: #2a2a2a;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.weather-card p {
+  margin: 10px 0;
+}
+
+.city {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.temp {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.desc {
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+
+.weather-icon {
+  width: 80px;
+}
+
+/* ---------------- ERROR ---------------- */
+
+.error {
+  background: yellow;
+  color: red;
+  padding: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ---------------- BACKGROUNDS ---------------- */
+
+body.clear {
+  background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+  background-size: cover;
+  background-position: center;
+}
+
+body.clouds {
+  background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31");
+  background-size: cover;
+  background-position: center;
+}
+
+body.rain {
+  background-image: url("https://images.unsplash.com/photo-1503756234508-e32369269deb");
+  background-size: cover;
+  background-position: center;
+}
+
+body.snow {
+  background-image: url("https://images.unsplash.com/photo-1485594050903-8e8ee7b071a8");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------------- FORECAST ---------------- */
+
+.forecast-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 15px 5px;
+  margin-top: 20px;
+}
+
+.forecast-card {
+  flex-shrink: 0;
+  width: 150px;
+  padding: 14px 10px;
+  border-radius: 14px;
+  text-align: center;
+
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+
+  transition: transform 0.2s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-4px);
+}
+
+body.dark .forecast-card {
+  background: rgba(0,0,0,0.6);
+  color: white;
+}
+
+.forecast-card p {
+  margin: 6px 0;
+}
+
+.forecast-card p:nth-child(1) {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.forecast-card p:nth-child(2) {
+  font-size: 14px;
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+
+.forecast-card p:nth-child(3) {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+/* ---------------- ANIMATION ---------------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
